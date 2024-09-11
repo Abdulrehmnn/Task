@@ -1,0 +1,46 @@
+.carousel .slick-dots {
+    bottom: 10px; /* Adjusts the position inside the image container */
+  }
+  
+  .carousel .slick-dots li {
+    margin: 0 0px; /* Reduces the gap between the dots */
+  }
+  
+  .carousel .slick-dots li button:before {
+    font-size: 10px;
+    color: #CEC1BC; 
+    opacity: 1;
+  }
+  
+  .carousel .slick-dots li.slick-active button:before {
+    color: #CEC1BC;
+  }
+  .dropdown-container {
+    width: 100%;
+    max-width: 250px; /* Adjust this value according to your layout */
+  }
+  
+  .select-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .dropdown {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 30px; /* Add padding to make room for the icon */
+    appearance: none; /* Removes the default browser dropdown arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'); /* Custom dropdown icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the custom icon */
+    background-size: 12px; /* Adjust size of the custom icon */
+  }
+  
+  .dropdown option {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  
