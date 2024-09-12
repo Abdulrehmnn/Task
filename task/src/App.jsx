@@ -1,103 +1,103 @@
 import React, { useState } from "react";
-import Slider from "react-slick"; // Import react-slick
+import Slider from "react-slick"; 
 import { FaSearch, FaTimes } from "react-icons/fa";
-// import LOGO from "../public/logo.png";
+import LOGO from "../public/logo.png";
 import CandleImage1 from "../public/1.png";
 import CandleImage3 from "../public/3.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./custom-slider.css"; // Import the custom CSS
-import Logo from "./Components/Logo";
-import { Carousel } from "./Components/Carousel";
-import Seach from "./Components/Seach";
-import Home from "./Components/Home";
+// import Logo from "./Components/Logo";
+// import { Carousel } from "./Components/Carousel";
+// import Seach from "./Components/Seach";
+// import Home from "./Components/Home";
 
-// const candles = [
-//   {
-//     id: 1,
-//     name: "Flute Jar Candle",
-//     diameter: '2.5"',
-//     height: '2"',
-//     weight: "80g",
-//     burnTime: "12+ Hours",
-//     price: "PKR 800+",
-//     images: [CandleImage3, CandleImage1, CandleImage3],
-//     description: "A beautifully crafted candle perfect for any room.",
-//   },
-//   {
-//     id: 2,
-//     name: "Common Butter Candle",
-//     diameter: '2.5"',
-//     height: '2"',
-//     weight: "80g",
-//     burnTime: "12+ Hours",
-//     price: "PKR 800+",
-//     images: [CandleImage1, CandleImage1, CandleImage3],
-//     description: "This is premium.",
-//   },
-// ];
+const candles = [
+  {
+    id: 1,
+    name: "Flute Jar Candle",
+    diameter: '2.5"',
+    height: '2"',
+    weight: "80g",
+    burnTime: "12+ Hours",
+    price: "PKR 800+",
+    images: [CandleImage3, CandleImage1, CandleImage3],
+    description: "A beautifully crafted candle perfect for any room.",
+  },
+  {
+    id: 2,
+    name: "Common Butter Candle",
+    diameter: '2.5"',
+    height: '2"',
+    weight: "80g",
+    burnTime: "12+ Hours",
+    price: "PKR 800+",
+    images: [CandleImage1, CandleImage1, CandleImage3],
+    description: "This is premium.",
+  },
+];
 
-// const items = [
-//   { id: 1, name: "FLUTE JAR" },
-//   { id: 2, name: "BOWL JAR" },
-//   { id: 3, name: "TEXTURED JAR" },
-//   { id: 4, name: "MATCHES" },
-// ];
+const items = [
+  { id: 1, name: "FLUTE JAR" },
+  { id: 2, name: "BOWL JAR" },
+  { id: 3, name: "TEXTURED JAR" },
+  { id: 4, name: "MATCHES" },
+];
 
 const Header = () => {
-  // const [selectedItem, setSelectedItem] = useState(items[0]);
-  // const [selectedCandleId, setSelectedCandleId] = useState(null);
-  // const [isSearchVisible, setIsSearchVisible] = useState(false);
-  // const [searchQuery, setSearchQuery] = useState("");
+  const [selectedItem, setSelectedItem] = useState(items[0]);
+  const [selectedCandleId, setSelectedCandleId] = useState(null);
+  const [isSearchVisible, setIsSearchVisible] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
-  // const handleItemClick = (item) => {
-  //   setSelectedItem(item);
-  // };
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+  };
 
-  // const handlePriceClick = (candleId) => {
-  //   setSelectedCandleId(candleId);
-  // };
+  const handlePriceClick = (candleId) => {
+    setSelectedCandleId(candleId);
+  };
 
-  // const handleCloseForm = () => {
-  //   setSelectedCandleId(null);
-  // };
+  const handleCloseForm = () => {
+    setSelectedCandleId(null);
+  };
 
-  // const handleSearchIconClick = () => {
-  //   setIsSearchVisible((prev) => !prev); // Toggle search input visibility
-  // };
+  const handleSearchIconClick = () => {
+    setIsSearchVisible((prev) => !prev); // Toggle search input visibility
+  };
 
-  // const handleSearchChange = (e) => {
-  //   setSearchQuery(e.target.value);
-  // };
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
 
-  // const settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   arrows: false,
-  //   appendDots: (dots) => (
-  //     <div>
-  //       <ul style={{ margin: "0px" }}>{dots}</ul>
-  //     </div>
-  //   ),
-  //   customPaging: (i) => (
-  //     <div
-  //       style={{
-  //         width: "8px",
-  //         height: "8px",
-  //         borderRadius: "50%",
-  //         backgroundColor: "#CEC1BC",
-  //         margin: "0 4px",
-  //       }}
-  //     />
-  //   ),
-  // };
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    appendDots: (dots) => (
+      <div>
+        <ul style={{ margin: "0px" }}>{dots}</ul>
+      </div>
+    ),
+    customPaging: (i) => (
+      <div
+        style={{
+          width: "8px",
+          height: "8px",
+          borderRadius: "50%",
+          backgroundColor: "#CEC1BC",
+          margin: "0 4px",
+        }}
+      />
+    ),
+  };
 
   return (
     <div className="relative text-center">
-      {/* <div className="bg-[#090916] h-[102px] flex items-center justify-center">
+       <div className="bg-[#090916] h-[102px] flex items-center justify-center">
         <div className="absolute top-[57px] left-1/2 transform -translate-x-1/2 z-10">
           <img
             src={LOGO}
@@ -105,14 +105,13 @@ const Header = () => {
             className="w-[80px] h-[83px] rounded-full"
           />
         </div>
-      </div> */}
-      <Logo/>
-      {/* <div className="mt-[60px]">
+      </div> 
+/       <div className="mt-[60px]">
         <h1 className="font-poppins text-[#1A1A36] font-custom-800 text-[16px]">
           AURA HOME STORES
         </h1>
-      </div> */}
-      {/* <div className="flex justify-center mt-2">
+      </div> 
+      <div className="flex justify-center mt-2">
         <div className="relative w-full max-w-screen-sm mt-3">
           <div className="overflow-x-auto whitespace-nowrap scrollbar-hide">
             {items.map((item) => (
@@ -133,10 +132,9 @@ const Header = () => {
             ))}
           </div>
         </div>
-      </div> */}
-      <Carousel/>
-      {/* <div className="w-full h-[1px] bg-[#BCC1CA]"></div> */}
-      {/* <div className="flex justify-center bg-[#F4F5F8]">
+      </div> 
+       <div className="w-full h-[1px] bg-[#BCC1CA]"></div> 
+       <div className="flex justify-center bg-[#F4F5F8]">
         <div className="relative w-full max-w-screen-sm p-4">
           <div className="flex items-center justify-end mt-2">
             {isSearchVisible && (
@@ -155,7 +153,7 @@ const Header = () => {
               <FaSearch className="text-white" />
             </button>
           </div>
-          <Seach/>
+      
           <h2 className="text-[#090916] font-extrabold mb-2 text-left mt-4 text-[17px]">
             FLUTE JAR CANDLES
           </h2>
@@ -269,8 +267,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div> */}
-      <Home/>
+      </div>
     </div>
   );
 };
